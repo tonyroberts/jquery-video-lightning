@@ -3,7 +3,9 @@
   "title": "Video Lightning",
   "version": "3.0.9",
   "description": "Turn any element into a lightbox or popover link for Youtube and Vimeo videos.",
-  "scripts": {},
+  "scripts": {
+    "build": "npx babel index.js --out-file dist/videoLightning.js --presets=@babel/preset-env && npx babel index.js --out-file dist/videoLightning.min.js --presets=@babel/preset-env,minify"
+  },
   "keywords": [
     "jquery",
     "jquery-plugin",
@@ -33,7 +35,12 @@
     "email": "info@musocrat.com"
   },
   "homepage": "https://github.com/musocrat/jquery-video-lightning/",
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-preset-minify": "^0.5.1"
+  },
   "licenses": [
     {
       "name": "MIT",
