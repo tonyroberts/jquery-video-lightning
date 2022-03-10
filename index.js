@@ -255,7 +255,7 @@ box-sizing: border-box;`
     cover () { if (this.yt) { this.coverYT() } }
 
     initPlayerYT () {
-      this.iframe.setAttribute('allowFullScreen', '')
+      this.iframe.setAttribute('allow', 'fullscreen; autoplay')
       _setSrc(this.iframe, {
         url: `https://www.youtube.com/embed/${this.id}`,
         params: {
